@@ -1,0 +1,786 @@
+/* =====================================================
+ANA MORAIS NAILS
+STYLE.CSS
+===================================================== */
+
+:root {
+--pink: #d98fa8;
+--pink-dark: #b86f89;
+--pink-light: #f9e7ed;
+--nude: #f6eee9;
+--cream: #fffaf8;
+--white: #ffffff;
+--gold: #c7a46a;
+--text: #4a3b3e;
+--text-light: #77686c;
+--dark: #30272a;
+--shadow: 0 15px 40px rgba(80, 45, 55, 0.10);
+--radius: 22px;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: "Montserrat", sans-serif;
+color: var(--text);
+background: var(--cream);
+line-height: 1.7;
+overflow-x: hidden;
+}
+
+img {
+width: 100%;
+display: block;
+object-fit: cover;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+button {
+font-family: inherit;
+}
+
+.container {
+width: min(1180px, 92%);
+margin: 0 auto;
+}
+
+
+/* =====================================================
+HEADER
+===================================================== */
+
+.header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+background: rgba(255, 250, 248, 0.94);
+backdrop-filter: blur(15px);
+border-bottom: 1px solid rgba(199, 164, 106, 0.15);
+}
+
+.nav-container {
+min-height: 80px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo,
+.footer-logo {
+font-family: "Cormorant Garamond", serif;
+font-size: 27px;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+.logo span,
+.footer-logo span {
+color: var(--pink);
+}
+
+.nav-menu {
+display: flex;
+align-items: center;
+gap: 25px;
+}
+
+.nav-menu a {
+font-size: 12px;
+font-weight: 600;
+transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+color: var(--pink-dark);
+}
+
+.nav-button {
+padding: 12px 20px;
+color: white !important;
+background: var(--pink);
+border-radius: 50px;
+}
+
+.nav-button:hover {
+background: var(--pink-dark);
+transform: translateY(-2px);
+}
+
+.menu-toggle {
+display: none;
+border: none;
+background: transparent;
+font-size: 28px;
+cursor: pointer;
+color: var(--text);
+}
+
+
+/* =====================================================
+HERO
+===================================================== */
+
+.hero {
+min-height: 100vh;
+position: relative;
+display: flex;
+align-items: center;
+
+background:
+linear-gradient(
+90deg,
+rgba(30, 20, 23, 0.68),
+rgba(30, 20, 23, 0.20)
+),
+url("images/hero.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+padding-top: 80px;
+max-width: 700px;
+color: white;
+}
+
+.eyebrow,
+.section-label {
+color: var(--gold);
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 3px;
+margin-bottom: 14px;
+}
+
+.hero h1 {
+font-family: "Cormorant Garamond", serif;
+font-size: clamp(54px, 7vw, 92px);
+line-height: 0.98;
+font-weight: 500;
+margin-bottom: 25px;
+}
+
+.hero h1 span,
+.hero span {
+color: var(--pink);
+}
+
+.hero-subtitle {
+font-size: 19px;
+margin-bottom: 30px;
+}
+
+.hero-description {
+max-width: 540px;
+margin-top: 25px;
+font-size: 13px;
+opacity: 0.9;
+}
+
+.primary-button,
+.secondary-button,
+.card-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+transition: 0.3s ease;
+cursor: pointer;
+}
+
+.primary-button {
+padding: 15px 28px;
+border-radius: 50px;
+background: var(--pink);
+color: white;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 1px;
+box-shadow: 0 10px 25px rgba(185, 105, 133, 0.25);
+}
+
+.primary-button:hover {
+background: var(--pink-dark);
+transform: translateY(-3px);
+box-shadow: 0 15px 30px rgba(185, 105, 133, 0.35);
+}
+
+.primary-button.large {
+padding: 18px 35px;
+}
+
+
+/* =====================================================
+SECTIONS
+===================================================== */
+
+.section {
+padding: 110px 0;
+}
+
+.section-heading {
+text-align: center;
+max-width: 650px;
+margin: 0 auto 55px;
+}
+
+.section-heading h2,
+.about-content h2,
+.location-content h2,
+.f1-content h2,
+.booking h2,
+.instagram-content h2 {
+font-family: "Cormorant Garamond", serif;
+font-size: clamp(40px, 5vw, 60px);
+line-height: 1;
+font-weight: 500;
+margin-bottom: 20px;
+}
+
+.section-heading h2 span,
+.about-content h2 span,
+.location-content h2 span,
+.f1-content h2 span,
+.booking h2 span,
+.instagram-content h2 span {
+color: var(--pink);
+}
+
+.section-heading p:last-child {
+color: var(--text-light);
+}
+
+.gold-line {
+width: 60px;
+height: 2px;
+background: var(--gold);
+margin: 25px 0;
+}
+
+
+/* =====================================================
+SOBRE
+===================================================== */
+
+.about {
+background: var(--white);
+}
+
+.about-grid {
+display: grid;
+grid-template-columns: 0.9fr 1fr;
+gap: 90px;
+align-items: center;
+}
+
+.about-image {
+height: 620px;
+border-radius: 160px 160px 25px 25px;
+overflow: hidden;
+box-shadow: var(--shadow);
+}
+
+.about-image img {
+height: 100%;
+}
+
+.about-content p {
+color: var(--text-light);
+margin-bottom: 18px;
+}
+
+
+/* =====================================================
+SERVIÇOS
+===================================================== */
+
+.services {
+background: var(--nude);
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.service-card {
+background: white;
+border-radius: var(--radius);
+overflow: hidden;
+box-shadow: var(--shadow);
+transition: 0.4s ease;
+}
+
+.service-card:hover {
+transform: translateY(-8px);
+}
+
+.service-image {
+height: 270px;
+overflow: hidden;
+}
+
+.service-image img {
+height: 100%;
+transition: 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+transform: scale(1.06);
+}
+
+.service-content {
+padding: 25px;
+}
+
+.service-content h3 {
+font-family: "Cormorant Garamond", serif;
+font-size: 29px;
+margin-bottom: 8px;
+}
+
+.service-content p {
+font-size: 13px;
+color: var(--text-light);
+margin-bottom: 15px;
+}
+
+.price {
+display: block;
+color: var(--pink-dark);
+font-size: 13px;
+margin-bottom: 20px;
+}
+
+.card-button {
+width: 100%;
+padding: 12px;
+border: 1px solid var(--pink);
+border-radius: 50px;
+color: var(--pink-dark);
+font-size: 11px;
+font-weight: 700;
+}
+
+.card-button:hover {
+background: var(--pink);
+color: white;
+}
+
+
+/* =====================================================
+GALERIA
+===================================================== */
+
+.gallery {
+background: var(--cream);
+}
+
+.gallery-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-auto-rows: 250px;
+gap: 15px;
+}
+
+.gallery-item {
+overflow: hidden;
+border-radius: 18px;
+cursor: pointer;
+}
+
+.gallery-item.tall {
+grid-row: span 2;
+}
+
+.gallery-item.wide {
+grid-column: span 2;
+}
+
+.gallery-item img {
+width: 100%;
+height: 100%;
+transition: 0.5s ease;
+}
+
+.gallery-item:hover img {
+transform: scale(1.07);
+}
+
+
+/* =====================================================
+F1
+===================================================== */
+
+.f1-section {
+padding: 110px 0;
+background: #f4dce4;
+}
+
+.f1-content {
+display: grid;
+grid-template-columns: 1fr 0.8fr;
+align-items: center;
+gap: 80px;
+}
+
+.f1-content > div:first-child > p:not(.section-label) {
+color: var(--text-light);
+margin-bottom: 30px;
+max-width: 550px;
+}
+
+.f1-image {
+height: 560px;
+border-radius: 200px 200px 20px 20px;
+overflow: hidden;
+box-shadow: var(--shadow);
+}
+
+.f1-image img {
+height: 100%;
+}
+
+
+/* =====================================================
+DEPOIMENTOS
+===================================================== */
+
+.testimonials {
+background: white;
+}
+
+.testimonials-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.testimonial-card {
+padding: 35px;
+border-radius: var(--radius);
+background: var(--cream);
+text-align: center;
+box-shadow: var(--shadow);
+}
+
+.stars {
+color: var(--gold);
+letter-spacing: 4px;
+margin-bottom: 18px;
+}
+
+.testimonial-card p {
+color: var(--text-light);
+font-size: 14px;
+margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+font-family: "Cormorant Garamond", serif;
+font-size: 22px;
+}
+
+
+/* =====================================================
+INSTAGRAM
+===================================================== */
+
+.instagram-section {
+padding: 110px 0;
+text-align: center;
+background:
+linear-gradient(rgba(70, 40, 48, 0.82), rgba(70, 40, 48, 0.82)),
+url("images/instagram-bg.jpg") center/cover;
+color: white;
+}
+
+.instagram-content {
+max-width: 650px;
+}
+
+.instagram-content h2 {
+margin-bottom: 15px;
+}
+
+.instagram-handle {
+font-size: 18px;
+margin-bottom: 30px;
+}
+
+
+/* =====================================================
+LOCALIZAÇÃO
+===================================================== */
+
+.location {
+background: var(--nude);
+}
+
+.location-grid {
+display: grid;
+grid-template-columns: 0.8fr 1.2fr;
+gap: 60px;
+align-items: center;
+}
+
+.location-content > p:not(.section-label) {
+color: var(--text-light);
+margin-bottom: 25px;
+}
+
+.secondary-button {
+padding: 14px 24px;
+border-radius: 50px;
+border: 1px solid var(--pink);
+color: var(--pink-dark);
+font-size: 11px;
+font-weight: 700;
+}
+
+.secondary-button:hover {
+background: var(--pink);
+color: white;
+}
+
+.map-container {
+min-height: 420px;
+border-radius: var(--radius);
+overflow: hidden;
+box-shadow: var(--shadow);
+background: #eadbd5;
+}
+
+.map-placeholder {
+height: 100%;
+min-height: 420px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: var(--text);
+}
+
+.map-placeholder span {
+font-size: 50px;
+margin-bottom: 15px;
+}
+
+
+/* =====================================================
+AGENDAMENTO
+===================================================== */
+
+.booking {
+padding: 120px 0;
+background: var(--dark);
+color: white;
+text-align: center;
+}
+
+.booking-content {
+max-width: 800px;
+}
+
+.booking h2 {
+margin-bottom: 20px;
+}
+
+.booking-content > p:not(.section-label) {
+max-width: 600px;
+margin: 0 auto 30px;
+opacity: 0.8;
+}
+
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+.footer {
+background: #251e20;
+color: white;
+padding-top: 70px;
+}
+
+.footer-grid {
+display: grid;
+grid-template-columns: 1.2fr 1fr 1.2fr;
+gap: 50px;
+padding-bottom: 50px;
+}
+
+.footer-logo {
+display: inline-block;
+margin-bottom: 15px;
+}
+
+.footer p {
+color: rgba(255, 255, 255, 0.65);
+font-size: 13px;
+}
+
+.footer h4 {
+color: var(--gold);
+font-size: 11px;
+letter-spacing: 2px;
+margin-bottom: 15px;
+}
+
+.footer-bottom {
+padding: 20px;
+text-align: center;
+border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+
+/* =====================================================
+LIGHTBOX
+===================================================== */
+
+.lightbox {
+position: fixed;
+inset: 0;
+z-index: 2000;
+display: none;
+align-items: center;
+justify-content: center;
+padding: 30px;
+background: rgba(20, 15, 17, 0.94);
+}
+
+.lightbox.active {
+display: flex;
+}
+
+.lightbox img {
+max-width: 900px;
+max-height: 85vh;
+object-fit: contain;
+border-radius: 15px;
+}
+
+.lightbox-close {
+position: absolute;
+top: 20px;
+right: 30px;
+border: none;
+background: transparent;
+color: white;
+font-size: 45px;
+cursor: pointer;
+}
+
+
+/* =====================================================
+RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+.nav-menu {
+position: absolute;
+top: 80px;
+left: 0;
+width: 100%;
+padding: 25px;
+background: var(--cream);
+display: none;
+flex-direction: column;
+align-items: stretch;
+text-align: center;
+box-shadow: var(--shadow);
+}
+
+.nav-menu.active {
+display: flex;
+}
+
+.menu-toggle {
+display: block;
+}
+
+.about-grid,
+.f1-content,
+.location-grid {
+grid-template-columns: 1fr;
+gap: 50px;
+}
+
+.services-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.testimonials-grid {
+grid-template-columns: 1fr;
+}
+
+.footer-grid {
+grid-template-columns: 1fr 1fr;
+}
+}
+
+
+@media (max-width: 650px) {
+
+.section {
+padding: 75px 0;
+}
+
+.hero {
+min-height: 850px;
+}
+
+.hero h1 {
+font-size: 55px;
+}
+
+.hero-subtitle {
+font-size: 16px;
+}
+
+.about-image {
+height: 450px;
+}
+
+.services-grid {
+grid-template-columns: 1fr;
+}
+
+.gallery-grid {
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: 220px;
+}
+
+.gallery-item.wide {
+grid-column: span 2;
+}
+
+.f1-image {
+height: 450px;
+}
+
+.footer-grid {
+grid-template-columns: 1fr;
+gap: 30px;
+}
+
+.lightbox {
+padding: 15px;
+}
+}
